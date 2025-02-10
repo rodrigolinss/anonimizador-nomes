@@ -1,6 +1,6 @@
 # Anonimizador de Nomes com BERT
 
-Este projeto é um **anonimizador de nomes** utilizando o modelo BERT (Bidirectional Encoder Representations from Transformers) pré-treinado, com foco em **Reconhecimento de Entidades Nomeadas (NER)**. O código foi desenvolvido para anonimizar nomes de pessoas em textos e arquivos (Excel ou CSV) de maneira eficiente.
+Este projeto é um **anonimizador de nomes** utilizando o modelo BERT (Bidirectional Encoder Representations from Transformers) pré-treinado, com foco em **Reconhecimento de Entidades Nomeadas (NER)**. O código foi desenvolvido para anonimizar nomes de pessoas em textos e arquivos (Excel ou CSV).
 
 ## Funcionalidade
 
@@ -21,6 +21,9 @@ Instale as dependências necessárias utilizando o seguinte comando:
 pip install transformers torch pandas
 ```
 
+ --- 
+
+ 
 ## Como Usar
 
 ### Anonimizar Texto
@@ -30,7 +33,8 @@ Para anonimizar um texto:
 ```python
 texto = "João foi ao supermercado e encontrou Maria."
 texto_anonimizado = anonimizar_nome(texto)
-print(texto_anonimizado)  # Saída: "**** foi ao supermercado e encontrou *****."
+print(texto_anonimizado)
+# Saída: "**** foi ao supermercado e encontrou *****."
 ```
 
 ### Anonimizar Arquivo
@@ -43,6 +47,4 @@ anonimizar_arquivo('arquivo.xlsx', 'arquivo_anonimizado.xlsx', 'TEXTO_LIVRE')
 
 Este código anonimiza a coluna `TEXTO_LIVRE` e salva o resultado como `arquivo_anonimizado.xlsx`.
 
-## Detalhes do Modelo
 
-O modelo `lfcc/bert-portuguese-ner` é treinado para identificar entidades no idioma português, como **nomes de pessoas, organizações e locais**. Este projeto foca em anonimizar **nomes de pessoas**, mas pode ser ajustado para lidar com outras entidades.
