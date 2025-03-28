@@ -46,5 +46,3 @@ anonimizar_arquivo('arquivo.xlsx', 'arquivo_anonimizado.xlsx', 'TEXTO_LIVRE')
 ```
 
 Este código anonimiza a coluna `TEXTO_LIVRE` e salva o resultado como `arquivo_anonimizado.xlsx`.
-
-
